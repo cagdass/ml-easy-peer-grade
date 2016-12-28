@@ -2,7 +2,7 @@ from distutils.core import setup
 setup(
   name = 'ml_easy_peer_grade',
   packages = ['ml_easy_peer_grade'], 
-  version = '0.14',
+  version = '0.15',
   scripts=['bin/ml_easy_peer_grade'],
   description = 'Ez peer grade your project members, exclusive to privileged Bilkent students',
   author = 'Cagdas Oztekin',
