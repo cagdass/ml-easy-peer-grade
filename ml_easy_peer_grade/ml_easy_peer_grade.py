@@ -7,6 +7,6 @@ def ez():
   else:
     args = sys.argv[1:]
     f = open('{}.txt'.format(args[0]), 'w')
-    s = "{0[0]} {0[1]}\n{0[2]} 5\n{0[3]} 5\n{0[4]} 5\n".format(args)
+    s = "{0[0]} {0[1]}\n{0[2]} 1\n{0[3]} 1\n{0[4]} 1\n".format(args)
     f.write(s)
     f.close() 
