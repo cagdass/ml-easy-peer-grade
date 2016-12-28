@@ -2,11 +2,14 @@
 import sys
 
 def ez():
-  if len(sys.argv) != 6:
-    print '<usage> ml_easy_peer_grade [YOUR_ID] [YOUR_LAST_NAME] [LAST_NAME_1] [LAST_NAME_2] [LAST_NAME_3]'
+  if len(sys.argv) < 3:
+    print '<usage> ml_easy_peer_grade [YOUR_ID] [YOUR_LAST_NAME] [nth_LAST_NAME]*'
   else:
     args = sys.argv[1:]
     f = open('{}.txt'.format(args[0]), 'w')
-    s = "{0[0]} {0[1]}\n{0[2]} 1\n{0[3]} 1\n{0[4]} 1\n".format(args)
+    s = "{0[0]} {0[1]}\n".format(args)
+    last_names = args[2:]
+    for name in last_names:
+      s += "{} 1\n".format(name)
     f.write(s)
     f.close() 
